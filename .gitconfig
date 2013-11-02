@@ -1,0 +1,21 @@
+[user]
+	name = mlwmlw
+	email = 520cutecat@gmail.com
+[color]
+	ui = auto
+	log = auto
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	br = branch
+	gb = log --graph --branches
+	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	gr = log --graph
+#	spull = !git-svn fetch && git stash save -q && git-svn rebase && git stash pop 
+	spull = !git-svn fetch && git-svn rebase
+	spush = !git-svn dcommit
+[core]
+	sharedRepository = true
+[http]
+	sslverify = false

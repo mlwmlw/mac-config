@@ -1,0 +1,8 @@
+alias ls="ls --color=auto"
+alias ll="ls -l"
+
+#export GOROOT=/usr/local/go/
+export GOPATH=$HOME/GO/
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$GOPATH/bin/:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
