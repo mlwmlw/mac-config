@@ -1,6 +1,7 @@
+"enable pathogen"
+execute pathogen#infect()
+"Global setup"
 syntax enable
-set background=dark
-colorscheme solarized
 set number
 "tab的寬度"
 set tabstop=2
@@ -34,6 +35,10 @@ Bundle 'scrooloose/nerdtree'
 an 50.20 &View.File\ Viewer<Tab><F5> <ESC>:NERDTreeToggle<CR>
 map <F5> <ESC>:NERDTreeToggle<CR> " Toggles NERD Tree view (file viewer)
 
+"theme setup"
+Bundle 'altercation/vim-colors-solarized'
+set background=dark
+colorscheme solarized
 
 
 
