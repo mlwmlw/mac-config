@@ -47,4 +47,4 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 eval $(dircolors ~/.dircolors)
 
-source .shrc
+source $HOME/.shrc
