@@ -42,9 +42,10 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+source $HOME/.shrc
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 eval $(dircolors ~/.dircolors)
 
-source $HOME/.shrc
