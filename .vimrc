@@ -40,8 +40,15 @@ Bundle 'altercation/vim-colors-solarized'
 set background=dark
 colorscheme solarized
 
+"easymotion"
+Bundle 'Lokaltog/vim-easymotion'
 
-
+"list functions"
+Bundle 'taglist.vim'
+nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_GainFocus_On_ToggleOpen=1
+let Tlist_Use_Right_Window=1
+let Tlist_WinWidth=50
 
 let g:SuperTabRetainCompletionType=2
 " 0 - 不記錄上次的補全方式
@@ -65,8 +72,7 @@ au BufNewFile,BufRead *.ejs set filetype=html
 "noremap <C-v> P
 
 " cancel searched highlight
-noremap ; :nohlsearch<CR>
-
+noremap <ESC><ESC> :nohlsearch<CR>
 " select ALL
 map <C-A> ggVG
 
@@ -84,3 +90,5 @@ noremap <BS> X
 " add a new line without entering insert mode
 noremap <CR> o<Esc>
 
+" next buffer"
+map <C-^> :bnext<cr>

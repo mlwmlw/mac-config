@@ -3,6 +3,6 @@ alias ll="ls -l"
 
 #export GOROOT=/usr/local/go/
 export GOPATH=$HOME/GO/
-
+export EDITOR=vim
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$GOPATH/bin/:$HOME/bin/:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
