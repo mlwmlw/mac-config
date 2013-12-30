@@ -1,13 +1,41 @@
 "enable pathogen"
 execute pathogen#infect()
-"Global setup"
+"global setup"
 syntax enable
 set number
 "tab的寬度"
 set tabstop=2
 "縮排的寬度"
 set shiftwidth=2
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"換行時自動縮排"
+set autoindent
+set smartindent
+"螢幕換行時不要切到單字"
+set linebreak
+"set list "
+set listchars=tab:->
+
+"filetype"
+au BufNewFile,BufRead *.ejs set filetype=html
+
+"switch tab"
+nnoremap <F2> :tabprevious<CR>
+nnoremap <F3> :tabnext<CR>
+
+" map backspce to delete a character
+noremap <BS> X
+" add a new line without entering insert mode
+noremap <CR> o<Esc>
+" cancel searched highlight
+noremap <ESC><ESC> :nohlsearch<CR>
+
+" next buffer"
+map <C-^> :bnext<cr>
+" select ALL
+map <C-A> ggVG
+" navigating for long lines
+map j gj
+map k gk
 
 "Vundle setup autoinstall"
 let iCanHazVundle=1
@@ -50,6 +78,18 @@ let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_Use_Right_Window=1
 let Tlist_WinWidth=50
 
+Bundle 'JavaScript-Indent'
+
+" close buffer keep its windows :BD :BW"
+Bundle 'bufkill.vim'
+
+"search file"
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"auto complete"
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 let g:SuperTabRetainCompletionType=2
 " 0 - 不記錄上次的補全方式
 " 1 - 記住上次的補全方式,直到用其他的補全命令改變它
@@ -65,30 +105,14 @@ set completeopt=menuone,menu,longest,preview
 "自動關閉預覽視窗(Preview Window)
 "ref: http://allen501pc.wordpress.com/2009/12/17/%E6%88%91%E7%9A%84-vim-%E8%A8%AD%E5%AE%9A%E9%85%8D%E7%BD%AE/
 
-au BufNewFile,BufRead *.ejs set filetype=html
 
 " map ctrl+c and ctrl+v
 "noremap <C-c> y
 "noremap <C-v> P
 
-" cancel searched highlight
-noremap <ESC><ESC> :nohlsearch<CR>
-" select ALL
-map <C-A> ggVG
-
-" navigating for long lines
-map j gj
-map k gk
 "map <UP> gk
 "map <DOWN> gj
 "imap <UP> <ESC>gk<RIGHT>i
 "imap <DOWN> <ESC>gj<RIGHT>i
 
-" map backspce to delete a character
-noremap <BS> X
 
-" add a new line without entering insert mode
-noremap <CR> o<Esc>
-
-" next buffer"
-map <C-^> :bnext<cr>
