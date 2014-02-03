@@ -14,9 +14,20 @@ set smartindent
 set linebreak
 "set list "
 set listchars=tab:->
-
 "filetype"
 au BufNewFile,BufRead *.ejs set filetype=html
+
+"toggle between terminal and vim mouse"
+set mouse="a"
+map <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
+imap <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
+function ShowMouseMode()
+	if (&mouse == 'a')
+		echo "mouse-vim"
+	else
+		echo "mouse-xterm"
+	endif
+endfunction
 
 "switch tab"
 nnoremap <F2> :tabprevious<CR>
@@ -31,11 +42,20 @@ noremap <ESC><ESC> :nohlsearch<CR>
 
 " next buffer"
 map <C-^> :bnext<cr>
-" select ALL
+nnoremap <C-tab> :bnext<cr>
+nnoremap <C-S-tab> :bprev<cr>
+nnoremap <C-n> :bnext<CR>
+
+" select ALL"
 map <C-A> ggVG
+
 " navigating for long lines
 map j gj
 map k gk
+
+" Save required stty -ixon "
+inoremap <C-s> <esc>:w<cr>
+nnoremap <C-s> :w<cr>
 
 "Vundle setup autoinstall"
 let iCanHazVundle=1
@@ -78,7 +98,6 @@ let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_Use_Right_Window=1
 let Tlist_WinWidth=50
 
-Bundle 'JavaScript-Indent'
 
 " close buffer keep its windows :BD :BW"
 Bundle 'bufkill.vim'
@@ -87,6 +106,7 @@ Bundle 'bufkill.vim'
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
 
 "auto complete"
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
