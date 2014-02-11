@@ -1,8 +1,9 @@
 mac-config
 ==========
+![screenshot](https://raw.github.com/mlwmlw/mac-config/master/screenshot-conemu.png)
 
 preinstall
-
+-------------
     $ yum install ctags zsh
     # change default shell
     $ chsh -s /bin/zsh
@@ -10,7 +11,7 @@ preinstall
     $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 install
-
+-------------
     $ git clone https://github.com/mlwmlw/mac-config.git
     # install vim bundles 
     $ vim +BundleInstall +qall!
@@ -18,7 +19,7 @@ install
     $ curl https://raw.github.com/seebi/dircolors-solarized/master/dircolors.ansi-universal > ~/.dircolors
 
 fixed iterm2 vim color bug
-
+-------------
     $ cd ~/.vim/bundle/vim-colors-solarized
     $ patch -p0 < ~/mac-config/vim-colors-solarized-iterm-patch.diff
     can't find file to patch at input line 5
