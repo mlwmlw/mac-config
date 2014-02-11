@@ -9,6 +9,7 @@
 	st = status
 	co = checkout
 	br = branch
+	ls = log --stat
 	gb = log --graph --branches
 	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	gr = log --graph

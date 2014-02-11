@@ -6,3 +6,7 @@ export GOPATH=$HOME/GO/
 export EDITOR=vim
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$GOPATH/bin/:$HOME/bin/:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+# disabled ^s stop flow
+stty -ixon
+# fixed tmux vim color
+alias tmux='TERM=xterm-256color tmux -2'
