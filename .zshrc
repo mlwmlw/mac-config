@@ -49,3 +49,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 eval $(dircolors ~/.dircolors)
 
+#fixed PuTTy keybind 
+# lookup ^v + end
+bindkey	"\e[4~"	end-of-line
+# lookup ^v + home
+bindkey	"\e[1~"	beginning-of-line
