@@ -107,6 +107,7 @@ Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+Bundle "gkz/vim-ls"
 
 "auto complete"
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
