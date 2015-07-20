@@ -16,7 +16,7 @@ install
     # install vim bundles 
     $ vim +BundleInstall +qall!
     # dircolors-solarized
-    $ curl https://raw.github.com/seebi/dircolors-solarized/master/dircolors.ansi-universal > ~/.dircolors
+    $ curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-universal > ~/.dircolors
 
 fixed iterm2 vim color bug
 -------------
