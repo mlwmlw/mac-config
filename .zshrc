@@ -54,3 +54,7 @@ eval $(dircolors ~/.dircolors)
 bindkey	"\e[4~"	end-of-line
 # lookup ^v + home
 bindkey	"\e[1~"	beginning-of-line
+# http://stackoverflow.com/questions/9810327/git-tab-autocompletion-is-useless-can-i-turn-it-off-or-optimize-it
+__git_files () { 
+	    _wanted files expl 'local files' _files     
+}
